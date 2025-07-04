@@ -1,0 +1,66 @@
+<!-- pages/quiz.html -->
+<div class="container my-5" ng-controller="quizController">
+
+  <h1 class="text-center text-primary fw-bold mb-4">
+    <i class="bi bi-patch-question-fill me-2"></i>Web Development Quizzes
+  </h1>
+
+  <!-- Select Quiz -->
+  <div class="card shadow-sm p-4 mb-4">
+    <label class="form-label fw-bold mb-2">
+      <i class="bi bi-list-check me-1 text-success"></i>Choose Quiz:
+    </label>
+    <select class="form-select w-auto d-inline-block" ng-model="selectedQuiz">
+      <option value="">-- Select --</option>
+      <option value="html">HTML Basics</option>
+      <option value="css">CSS Basics</option>
+      <option value="js">JavaScript Basics</option>
+      <option value="all">Basic Frontend</option>
+    </select>
+  </div>
+
+  <!-- Quiz Questions -->
+  <div ng-if="selectedQuiz">
+    <form ng-submit="submitQuiz()">
+      <div class="card shadow-sm p-4 mb-3" ng-repeat="q in quizzes[selectedQuiz].questions">
+        <p class="fw-bold mb-3 text-dark">
+          <i class="bi bi-question-circle text-primary me-2"></i>{{$index + 1}}. {{q.question}}
+        </p>
+        <div class="ms-3">
+          <div class="form-check mb-2" ng-repeat="option in q.options">
+            <label class="form-check-label">
+              <input type="radio"
+                     class="form-check-input"
+                     ng-model="q.answer"
+                     ng-value="option">
+              {{option}}
+            </label>
+          </div>
+        </div>
+		 <div class="alert alert-warning p-2 mt-2" ng-if="q.showCorrect">
+  ✅ Correct Answer: <strong>{{q.correct}}</strong>
+</div>
+      </div>
+	 
+
+      <button type="submit" class="btn btn-success btn-lg mt-3">
+        <i class="bi bi-check2-circle me-1"></i>Submit Quiz
+      </button>
+    </form>
+  </div>
+
+  <!-- Result -->
+  <div class="alert alert-info shadow-sm mt-4" ng-if="showResult">
+    <h5 class="fw-bold mb-2">
+      🎉 Your Score: {{score}} / {{quizzes[selectedQuiz].questions.length}}
+    </h5>
+    <p class="mb-1">
+      <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+      Mistakes are proof that you are trying!
+    </p>
+    <p class="mb-0">
+      💡 <strong>Re-learn the basics</strong> in our website — Stay tuned & keep practicing!
+    </p>
+  </div>
+
+</div>

@@ -1,0 +1,203 @@
+<div class="container my-5  bg-light shadow-lg rounded p-3">	
+
+  <!-- Page Title -->
+  <h1 class="text-center text-danger fw-bold mb-4">
+    <i class="bi bi-filetype-html me-2"></i>HTML Basics
+  </h1>
+
+  <!-- Introduction -->
+  <p class="lead text-center mb-4">
+    HTML stands for <strong>HyperText Markup Language</strong>. It forms the backbone of every web page. With HTML, you define structure, organize content, and integrate media.
+  </p>
+
+  <!-- What Can HTML Do -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-primary mb-3"><i class="bi bi-info-circle-fill me-2"></i>What Can HTML Do?</h4>
+    <ul>
+      <li>Create and structure content using semantic elements</li>
+      <li>Embed images, videos, audio, and external content</li>
+      <li>Form the foundation for styling (CSS) and interaction (JavaScript)</li>
+    </ul>
+  </div>
+
+  <!-- Basic Structure -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-success"><i class="bi bi-diagram-3-fill me-2"></i>Basic HTML Structure</h4>
+    <pre class="bg-dark text-white p-3 rounded">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p><strong>Output:</strong></p>
+    <div class="border p-3 bg-white rounded">
+      <h1>Welcome</h1>
+      <p>This is a paragraph.</p>
+    </div>
+  </div>
+
+  <!-- Tag Table -->
+  <div class="table-responsive mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-table me-2"></i>Common Tags and Usage</h4>
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;h1&gt;–&lt;h6&gt;</code></td><td>Headings</td><td><code>&lt;h2&gt;Heading&lt;/h2&gt;</code></td></tr>
+        <tr><td><code>&lt;p&gt;</code></td><td>Paragraph</td><td><code>&lt;p&gt;Text&lt;/p&gt;</code></td></tr>
+        <tr><td><code>&lt;a&gt;</code></td><td>Hyperlink</td><td><code>&lt;a href="#"&gt;Click&lt;/a&gt;</code></td></tr>
+        <tr><td><code>&lt;img&gt;</code></td><td>Image</td><td><code>&lt;img src="pic.jpg"&gt;</code></td></tr>
+        <tr><td><code>&lt;ul&gt;, &lt;li&gt;</code></td><td>Unordered List</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Common Examples with Output -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-tags-fill me-2"></i>Examples & Output</h4>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <p><strong>Heading</strong></p>
+        <pre>&lt;h2&gt;Subheading&lt;/h2&gt;</pre>
+        <div class="bg-white p-2 border"><h2>Subheading</h2></div>
+
+        <p><strong>Paragraph</strong></p>
+        <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+        <div class="bg-white p-2 border"><p>This is a paragraph.</p></div>
+
+        <p><strong>Link</strong></p>
+        <pre>&lt;a href="#"&gt;Click here&lt;/a&gt;</pre>
+        <div class="bg-white p-2 border"><a href="#">Click here</a></div>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Image</strong></p>
+        <pre>&lt;img src="img.jpg" alt="Sample"&gt;</pre>
+        <div class="bg-white p-2 border">
+          <img src="https://via.placeholder.com/150" alt="Sample">
+        </div>
+
+        <p><strong>List</strong></p>
+        <pre>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;</pre>
+        <div class="bg-white p-2 border"><ul><li>Item 1</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Block vs Inline -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-columns-gap me-2"></i>Block vs Inline Elements</h4>
+    <ul>
+      <li><strong>Block:</strong> New line, full width — <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code></li>
+      <li><strong>Inline:</strong> Same line — <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code></li>
+    </ul>
+  </div>
+
+<!-- Semantic vs Non-Semantic -->
+<div class="row mb-5">
+  <h4 class="fw-bold text-primary">
+    <i class="bi bi-layout-text-sidebar me-2"></i>Semantic vs Non-Semantic
+  </h4>
+
+  <!-- Semantic Tags -->
+  <div class="col-md-6">
+    <div class="p-3 bg-white border-start border-4 border-success shadow-sm">
+      <h5 class="text-success"><i class="bi bi-lightbulb me-2"></i>Semantic Tags</h5>
+      <ul class="mb-0">
+        <li><code>&lt;header&gt;</code> – Defines the top section of a page or section. Usually contains logos, titles, or navigation.</li>
+        <li><code>&lt;nav&gt;</code> – Represents a navigation menu (like links to other pages or sections).</li>
+        <li><code>&lt;main&gt;</code> – Represents the main content of a document. Only one <code>&lt;main&gt;</code> should be used per page.</li>
+        <li><code>&lt;section&gt;</code> – Groups related content together. Often used with headings to define different topics.</li>
+        <li><code>&lt;article&gt;</code> – Represents independent, self-contained content like a blog post, news article, or forum post.</li>
+        <li><code>&lt;footer&gt;</code> – Defines the bottom section of a page or section. Usually includes copyright, contact info, or links.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Non-Semantic Tags -->
+  <div class="col-md-6">
+    <div class="p-3 bg-white border-start border-4 border-warning shadow-sm">
+      <h5 class="text-warning"><i class="bi bi-exclamation-circle me-2"></i>Non-Semantic Tags</h5>
+      <ul class="mb-0">
+        <li><code>&lt;div&gt;</code> – A generic block-level container. It has no meaning by itself and is often used for grouping elements for styling or layout.</li>
+        <li><code>&lt;span&gt;</code> – A generic inline container. Used to apply styles or target small pieces of content without affecting layout.</li>
+      </ul>
+      <p class="text-muted mt-2">🔍 These tags don’t tell the browser or developer anything about the content inside them.</p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Semantic Examples -->
+  <div class="row mb-5">
+    <div class="col-md-6 border p-3">
+      <h6>Semantic Example</h6>
+      <pre>
+&lt;header&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+&lt;/header&gt;</pre>
+      <header><h1>Site Title</h1></header>
+    </div>
+    <div class="col-md-6 border p-3">
+      <h6>Non-Semantic Example</h6>
+      <pre>
+&lt;div&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+&lt;/div&gt;</pre>
+      <div><h1>Site Title</h1></div>
+    </div>
+  </div>
+
+  <!-- Practice Task -->
+  <div class="alert alert-warning">
+    <strong>Try This:</strong> Create a "My Profile" page with your photo, a short intro, and a contact section using only HTML.
+  </div>
+
+  <!-- HTML5 APIs -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-danger"><i class="bi bi-boxes me-2"></i>Useful HTML5 APIs</h4>
+    <ul>
+      <li><strong>Canvas API:</strong> For graphics/drawing</li>
+      <li><strong>Geolocation API:</strong> Get user’s location</li>
+      <li><strong>Web Storage API:</strong> Store data locally (localStorage)</li>
+      <li><strong>Media API:</strong> Embed audio and video</li>
+    </ul>
+  </div>
+
+  <!-- Meta Tags -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-warning"><i class="bi bi-card-text me-2"></i>Meta Tags for SEO</h4>
+    <pre class="bg-dark text-white p-3 rounded">
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="HTML Beginner Guide"&gt;
+    </pre>
+    <p>📌 These go in your <code>&lt;head&gt;</code> for search optimization and mobile-friendly layout.</p>
+  </div>
+
+  <!-- Quiz Section -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h5 class="fw-bold text-success"><i class="bi bi-patch-question me-2"></i>Quick HTML Quiz</h5>
+    <ol>
+      <li>Which tag defines a hyperlink?</li>
+      <li>How do you add an image in HTML?</li>
+      <li>What’s the difference between <code>&lt;div&gt;</code> and <code>&lt;section&gt;</code>?</li>
+      <li>What is the output of <code>&lt;h3&gt;Hello&lt;/h3&gt;</code>?</li>
+      <li>Why are semantic tags important?</li>
+    </ol>
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mt-4">
+    <a href="#!/css" class="btn btn-outline-success btn-lg">
+      <i class="bi bi-palette me-2"></i>Next: Learn CSS
+    </a>
+  </div>
+
+</div>

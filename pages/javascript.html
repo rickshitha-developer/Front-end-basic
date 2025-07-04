@@ -1,0 +1,448 @@
+<style>
+  
+
+  /* Code box hover glow */
+  .code-box {
+    background:black;
+    border-left: 5px solid #0d6efd;
+    padding: 1rem;
+    font-family: monospace;
+    overflow-x: auto;
+    transition: background 0.3s ease;
+  }
+
+  .code-box:hover {
+    background: grey;
+  }
+
+  /* Buttons grow on hover */
+  .btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+
+  /* Preview box subtle animation */
+  .preview-box {
+    padding: 1rem;
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .preview-box:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+</style>
+
+<div class="container my-5  shadow-lg rounded p-3">	
+
+  <h1 class="text-center text-warning fw-bold mb-4">
+    <i class="bi bi-terminal-fill me-2"></i>JavaScript Basics
+  </h1>
+
+  <p class="lead text-center mb-4">
+    JavaScript is the scripting language that brings interactivity to websites. It handles user actions, animations, dynamic content, and API calls.
+  </p>
+
+  <!-- Why JS -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-success mb-3">
+      <i class="bi bi-lightning-fill me-2"></i>What Can JavaScript Do?
+    </h4>
+    <ul>
+      <li>Manipulate HTML & CSS (change content, styles, classes)</li>
+      <li>Handle user events (clicks, input, form submission)</li>
+      <li>Fetch data from servers (AJAX, APIs)</li>
+      <li>Create animations & dynamic effects</li>
+    </ul>
+  </div>
+
+  <!-- Syntax -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-primary">
+      <i class="bi bi-code-slash me-2"></i>Basic Syntax
+    </h4>
+    <pre class="code-box">
+&lt;script&gt;
+  console.log('Hello World');
+&lt;/script&gt;
+    </pre>
+    <p>Use <code>&lt;script&gt;</code> tags to write or link JavaScript in your HTML.</p>
+  </div>
+<!-- Data Types -->
+<div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-primary">
+    <i class="bi bi-list-check me-2"></i>Common Data Types
+  </h4>
+  <p>Each data type holds a different kind of information:</p>
+  <ul>
+    <li><code>String</code> – Text inside quotes, e.g. <code>"Hello"</code></li>
+    <li><code>Number</code> – Numbers, e.g. <code>42</code></li>
+    <li><code>Boolean</code> – True or False only</li>
+    <li><code>Array</code> – Ordered list, e.g. <code>[1, 2, 3]</code></li>
+    <li><code>Object</code> – Named properties, e.g. <code>{ name: "Sam" }</code></li>
+    <li><code>Null</code> – Empty value (intentionally no value)</li>
+    <li><code>Undefined</code> – Variable declared but no value assigned yet</li>
+  </ul>
+</div>
+
+
+  <!-- Variables -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-info">
+      <i class="bi bi-pencil-fill me-2"></i>Variables
+    </h4>
+    <p>Use <code>var</code>, <code>let</code>, or <code>const</code> to store data:</p>
+    <pre class="code-box">
+let name = "John";
+const pi = 3.14;
+var age = 20;
+    </pre>
+  </div>
+
+
+<!-- Template Literals -->
+<div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-warning">
+    <i class="bi bi-card-text me-2"></i>Template Literals
+  </h4>
+  <p>
+    Template literals let you embed variables in strings easily:
+  </p>
+  <pre class="code-box">
+let name = "Anna";
+let message = `Hello, ${name}!`;
+console.log(message); // Hello, Anna!
+  </pre>
+</div>
+
+<!-- Operators -->
+<div class="mb-5">
+  <h4 class="fw-bold text-info">
+    <i class="bi bi-slash-square me-2"></i>Operators Explained
+  </h4>
+  <p>Operators perform operations on values and variables. They help you calculate, compare, assign, and combine conditions.</p>
+
+  <div class="bg-light p-3 rounded shadow-sm mb-3">
+    <h5 class="text-primary fw-bold mb-2">
+      <i class="bi bi-plus-slash-minus me-2"></i>Arithmetic Operators
+    </h5>
+    <p>Used for basic math:</p>
+    <ul>
+      <li><code>+</code> Addition: <code>5 + 2</code> → <code>7</code></li>
+      <li><code>-</code> Subtraction: <code>5 - 2</code> → <code>3</code></li>
+      <li><code>*</code> Multiplication: <code>5 * 2</code> → <code>10</code></li>
+      <li><code>/</code> Division: <code>5 / 2</code> → <code>2.5</code></li>
+      <li><code>%</code> Modulus (Remainder): <code>5 % 2</code> → <code>1</code></li>
+      <li><code>++</code> Increment: <code>x++</code> adds 1</li>
+      <li><code>--</code> Decrement: <code>x--</code> subtracts 1</li>
+    </ul>
+  </div>
+
+  <div class="bg-light p-3 rounded shadow mb-3">
+    <h5 class="text-success fw-bold mb-2">
+      <i class="bi bi-arrow-left-right me-2"></i>Assignment Operators
+    </h5>
+    <p>Assign values to variables:</p>
+    <ul>
+      <li><code>=</code> Assign: <code>x = 10</code></li>
+      <li><code>+=</code> Add and assign: <code>x += 5</code> (same as <code>x = x + 5</code>)</li>
+      <li><code>-=</code> Subtract and assign: <code>x -= 2</code></li>
+    </ul>
+  </div>
+
+  <div class="bg-light p-3 rounded shadow-sm mb-3">
+    <h5 class="text-warning fw-bold mb-2">
+      <i class="bi bi-check2-circle me-2"></i>Comparison Operators
+    </h5>
+    <p>Compare values, return true or false:</p>
+    <ul>
+      <li><code>==</code> Equal (value only)</li>
+      <li><code>===</code> Strict equal (value & type)</li>
+      <li><code>!=</code> Not equal</li>
+      <li><code>&lt;</code> Less than</li>
+      <li><code>&gt;</code> Greater than</li>
+      <li><code>&lt;=</code> Less than or equal to</li>
+    </ul>
+  </div>
+
+  <div class="bg-light p-3 rounded shadow-sm mb-3">
+    <h5 class="text-danger fw-bold mb-2">
+      <i class="bi bi-diagram-3-fill me-2"></i>Logical Operators
+    </h5>
+    <p>Combine multiple conditions:</p>
+    <ul>
+      <li><code>&&</code> AND – true if both conditions are true</li>
+      <li><code>||</code> OR – true if at least one is true</li>
+      <li><code>!</code> NOT – reverses true/false</li>
+    </ul>
+  </div>
+
+  <pre class="code-box">
+let x = 10;
+x += 5; // 15
+
+let isAdult = age >= 18 && age < 60; // true if age is between 18 and 59
+  </pre>
+</div>
+
+<div class="alert alert-success">
+  🚀 <strong>Keep Exploring:</strong> Practice small scripts, play in the console, and break things to learn!
+</div>
+
+<!-- Conditional Statements -->
+<div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-warning">
+    <i class="bi bi-funnel-fill me-2"></i>Conditional Statements
+  </h4>
+  <p>Conditions help you run code only if something is true or false:</p>
+<ul>
+  <li><code>if</code> – Runs a block if condition is true.</li>
+  <li><code>else</code> – Runs if the condition is false.</li>
+  <li><code>else if</code> – Checks another condition if the first is false.</li>
+  <li><code>switch</code> – Runs different blocks based on a matching value.</li>
+</ul>
+
+  <p>Control your code flow with conditions:</p>
+  <pre class="code-box">
+if (score >= 50) {
+  console.log("Passed!");
+} else {
+  console.log("Try again!");
+}
+  </pre>
+  <pre class="code-box">
+let grade = "B";
+switch (grade) {
+  case "A":
+    console.log("Excellent!");
+    break;
+  case "B":
+    console.log("Good Job!");
+    break;
+  default:
+    console.log("Keep Working!");
+}
+  </pre>
+</div>
+
+  <!-- Functions -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-success">
+      <i class="bi bi-arrow-return-right me-2"></i>Functions
+    </h4>
+	<p>Functions save reusable blocks of code. Call them whenever you need them.</p>
+
+    <p>Functions perform actions when called:</p>
+    <pre class="code-box">
+function greet() {
+  alert("Hello!");
+}
+
+greet();
+    </pre>
+  </div>
+
+<!-- Arrow Functions -->
+<div class="mb-5">
+  <h4 class="fw-bold text-success">
+    <i class="bi bi-arrow-right-circle-fill me-2"></i>Arrow Functions
+  </h4>
+  <p>
+    Arrow functions are a shorter way to write functions:
+  </p>
+  <pre class="code-box">
+// Regular function
+function add(x, y) {
+  return x + y;
+}
+
+// Arrow function
+const add = (x, y) => x + y;
+
+console.log(add(2, 3)); // 5
+  </pre>
+</div>
+<!-- Array Methods -->
+<div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-primary">
+    <i class="bi bi-list-ul me-2"></i>Array Methods
+  </h4>
+  <p>
+    JavaScript arrays come with powerful methods:
+  </p>
+  <pre class="code-box">
+let numbers = [1, 2, 3, 4, 5];
+
+// forEach
+numbers.forEach(num => console.log(num));
+
+// map
+let squares = numbers.map(num => num * num);
+console.log(squares); // [1,4,9,16,25]
+
+// filter
+let even = numbers.filter(num => num % 2 === 0);
+console.log(even); // [2,4]
+  </pre>
+</div>
+
+  <!-- Loops -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-secondary">
+      <i class="bi bi-repeat me-2"></i>Loops
+    </h4>
+	<p>Loops repeat actions automatically:</p>
+<ul>
+  <li><code>for</code> – Repeat a block a specific number of times.</li>
+  <li><code>while</code> – Repeat while a condition is true.</li>
+  <li><code>do...while</code> – Like <code>while</code> but runs at least once.</li>
+</ul>
+
+    <p>Loops repeat actions:</p>
+    <pre class="code-box">
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+    </pre>
+	<p>While Loop</p>
+<pre class="code-box">
+let count = 1;
+while (count <= 5) {
+  console.log(count);
+  count++;
+}
+</pre>
+<p>Do While Loop</p>
+<pre class="code-box">
+let num = 1;
+do {
+  console.log(num);
+  num++;
+} while (num <= 3);
+</pre>
+
+  </div>
+<div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-secondary">
+    <i class="bi bi-chat-left-dots-fill me-2"></i>Comments
+  </h4>
+  <p>Use comments to explain code and make it easy to understand for others (or yourself later!).</p>
+
+  <p>They don’t run.</p>
+  <pre class="code-box">
+// This is a single-line comment
+
+/*
+  This is a 
+  multi-line comment
+*/
+  </pre>
+</div>
+
+
+  <!-- DOM Manipulation -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-danger">
+      <i class="bi bi-code-square me-2"></i>DOM Manipulation
+    </h4>
+    <p>Access and change HTML elements:</p>
+    <pre class="code-box">
+document.getElementById("demo").innerHTML = "Updated!";
+    </pre>
+    <div class="preview-box">
+      <p id="demo">This text will change</p>
+      <button onclick="document.getElementById('demo').innerHTML = 'Updated!';" class="btn btn-primary">
+        Change Text
+      </button>
+    </div>
+  </div>
+  <!-- Events -->
+<div class="mb-5">
+  <h4 class="fw-bold text-success">
+    <i class="bi bi-mouse me-2"></i>Events
+  </h4>
+  <p>React to user actions using event listeners:</p>
+  <pre class="code-box">
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button Clicked!");
+});
+  </pre>
+  <div class="preview-box">
+    <button id="btn" class="btn btn-info">Click Me</button>
+  </div>
+  <script>
+    document.getElementById("btn").addEventListener("click", function() {
+      alert("Button Clicked!");
+    });
+  </script>
+</div>
+<!-- More Events -->
+<div class="mb-5">
+  <h4 class="fw-bold text-danger">
+    <i class="bi bi-bell-fill me-2"></i>More Events
+  </h4>
+  <p>Listen to different events like <code>mouseover</code>, <code>keydown</code>, and more:</p>
+  <pre class="code-box">
+document.getElementById("hoverMe").addEventListener("mouseover", function() {
+  alert("Mouse over me!");
+});
+  </pre>
+  <div class="preview-box">
+    <button id="hoverMe" class="btn btn-warning">Hover Over Me</button>
+  </div>
+  <script>
+    document.getElementById("hoverMe").addEventListener("mouseover", function() {
+      alert("Mouse over me!");
+    });
+  </script>
+</div>
+<!-- Debugging Tips -->
+<div class="alert alert-info shadow-sm">
+  <i class="bi bi-bug-fill me-2"></i>
+  <strong>Debug Tip:</strong> Use <code>console.log()</code>, <code>console.error()</code>, and browser DevTools to inspect your code step by step.
+</div>
+
+
+  <!-- Practice Task -->
+  <div class="alert alert-warning">
+    💡 <strong>Try this:</strong> Write a function that changes the color of a paragraph when you click a button.
+  </div>
+
+  <!-- Quiz -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h5 class="fw-bold text-success">
+      <i class="bi bi-patch-question me-2"></i>JavaScript Quick Quiz
+    </h5>
+    <ol>
+      <li>How do you declare a constant variable?</li>
+      <li>What is <code>document.getElementById()</code> used for?</li>
+      <li>How do you log something in the console?</li>
+      <li>Which keyword creates a block-scoped variable?</li>
+      <li>Write a <code>for</code> loop that counts from 1 to 10.</li>
+    </ol>
+  </div>
+<!-- AngularJS Example -->
+<div ng-app="" class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-danger">
+    <i class="bi bi-bootstrap-reboot me-2"></i>AngularJS Example
+  </h4>
+  <p>Type something and see it instantly:</p>
+  <input type="text" ng-model="name" placeholder="Enter your name" class="form-control mb-3">
+  <h5>Hello, {{name}}!</h5>
+</div>
+
+<!-- Add AngularJS CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- Next Navigation -->
+  <div class="text-center mt-5">
+    <a href="#!/bootstrap" class="btn btn-outline-dark me-2">
+      <i class="bi bi-arrow-left me-1"></i>Back to Bootstrap
+    </a>
+    <a href="#!/flask" class="btn btn-outline-success btn-lg">
+      <i class="bi bi-code me-2"></i>Next: Learn Flask
+    </a>
+  </div>
+</div>

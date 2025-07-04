@@ -1,0 +1,289 @@
+<div class="container my-5  bg-light shadow-lg rounded p-3">
+  <div class="p-5 text-center rounded" style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: #fff;">
+    <h1 class="fw-bold mb-3">
+      <i class="bi bi-palette-fill me-2"></i>CSS Basics
+    </h1>
+    <p class="lead mb-0">
+      CSS (Cascading Style Sheets) brings your web pages to life — colors, layouts, animations, and full responsiveness!
+    </p>
+  </div>
+
+  <!-- What CSS Can Do -->
+  <div class="bg-light p-4 rounded shadow-sm my-5">
+    <h4 class="fw-bold text-success mb-3"><i class="bi bi-magic me-2"></i>What Can CSS Do?</h4>
+    <ul class="list-unstyled">
+      <li><i class="bi bi-check-circle-fill text-success me-2"></i>Change colors, fonts, and spacing</li>
+      <li><i class="bi bi-check-circle-fill text-success me-2"></i>Create responsive layouts with Flexbox/Grid</li>
+      <li><i class="bi bi-check-circle-fill text-success me-2"></i>Add transitions, animations, hover effects</li>
+      <li><i class="bi bi-check-circle-fill text-success me-2"></i>Build interactive pages with media queries</li>
+    </ul>
+  </div>
+
+   <!-- Types of CSS -->
+  <div class="bg-white p-4 rounded shadow-sm mb-5 border">
+    <h4 class="fw-bold text-warning"><i class="bi bi-code-square me-2"></i>Types of CSS</h4>
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inline</td>
+          <td>Inside HTML tag</td>
+          <td><code>&lt;p style="color:red;"&gt;Text&lt;/p&gt;</code></td>
+        </tr>
+        <tr>
+          <td>Internal</td>
+          <td>Inside &lt;style&gt; tag</td>
+          <td><code>&lt;style&gt;p { color: red; }&lt;/style&gt;</code></td>
+        </tr>
+        <tr>
+          <td>External</td>
+          <td>Linked .css file</td>
+          <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<!-- Fonts & Text Effects -->
+  <div class="p-4 mb-5 rounded shadow-sm" style="background: #f0f9ff;">
+    <h4 class="fw-bold text-primary"><i class="bi bi-fonts me-2"></i>Fonts & Text Effects</h4>
+    <ul>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>font-family</code>: Choose fonts</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>font-size</code>: px, em, rem</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>font-weight</code>: Boldness</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>text-align</code>: alignment</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>text-decoration</code>: underline, none</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>text-transform</code>: uppercase, lowercase</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>line-height</code>: spacing between lines</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>letter-spacing</code>: spacing between letters</li>
+      <li><i class="bi bi-pencil me-2 text-primary"></i><code>text-shadow</code>: text shadow</li>
+    </ul>
+    <pre class="p-3 bg-dark text-light rounded">
+.heading {
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #888;
+}
+    </pre>
+  </div>
+
+<!-- Borders & Shadows -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-danger"><i class="bi bi-square me-2"></i>Borders & Box Shadows</h4>
+    <ul>
+      <li><code>border</code>: style, width, color</li>
+      <li><code>border-radius</code>: round corners</li>
+      <li><code>box-shadow</code>: add depth</li>
+    </ul>
+    <pre>.card {
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}</pre>
+  </div>
+   <!-- Transform & Transitions -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-success"><i class="bi bi-arrow-repeat me-2"></i>Transform & Transition</h4>
+    <ul>
+      <li><code>transform</code>: rotate, scale, translate</li>
+      <li><code>transition</code>: smooth change</li>
+    </ul>
+    <pre>.btn {
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}</pre>
+  </div>
+
+  <!-- Display & Visibility -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-eye me-2"></i>Display & Visibility</h4>
+    <ul>
+      <li><code>display: block | inline | inline-block | flex | grid | none</code></li>
+      <li><code>visibility: visible | hidden</code></li>
+    </ul>
+    <pre>.hidden { display: none; }</pre>
+  </div>
+	
+
+<!-- ✅ Selectors -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-primary"><i class="bi bi-funnel-fill me-2"></i>CSS Selectors</h4>
+    <p>Selectors target HTML elements to style them:</p>
+    <ul>
+      <li><strong>Element:</strong> <code>h1 { color: green; }</code></li>
+      <li><strong>Class:</strong> <code>.btn { padding: 10px; }</code></li>
+      <li><strong>ID:</strong> <code>#header { background: black; }</code></li>
+      <li><strong>Attribute:</strong> <code>a[target="_blank"] { }</code></li>
+      <li><strong>Pseudo-class:</strong> <code>li:first-child</code></li>
+      <li><strong>Pseudo-element:</strong> <code>p::after</code></li>
+    </ul>
+  </div>
+  <!-- ✅ Specificity -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-danger"><i class="bi bi-bar-chart-fill me-2"></i>Understanding Specificity</h4>
+    <p>When multiple rules target the same element, specificity decides which rule wins:</p>
+    <ul>
+      <li>Inline style > ID selector > Class selector > Element selector</li>
+      <li>Use fewer !important overrides — use clean hierarchy instead.</li>
+    </ul>
+    <pre>
+/* Example */
+#box { color: red; } /* ID wins */
+.box { color: blue; }
+div { color: green; }
+    </pre>
+  </div>
+
+  <!-- Units -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-secondary"><i class="bi bi-rulers me-2"></i>CSS Units</h4>
+    <ul>
+      <li><code>px</code> – Absolute pixel</li>
+      <li><code>%</code> – Relative to parent</li>
+      <li><code>em / rem</code> – Relative to font-size</li>
+      <li><code>vh / vw</code> – Viewport height/width</li>
+    </ul>
+  </div>
+  <!-- ✅ Variables -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-success"><i class="bi bi-sliders me-2"></i>CSS Variables</h4>
+    <p>Reuse values easily with custom properties:</p>
+    <pre>
+:root {
+  --main-color: #3498db;
+}
+
+h1 {
+  color: var(--main-color);
+}
+    </pre>
+  </div>
+
+	 <!-- ✅ Position & Z-Index -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-arrows-move me-2"></i>Position & Z-Index</h4>
+    <p>Control where elements appear on the page:</p>
+    <ul>
+      <li><code>position: static;</code> (default)</li>
+      <li><code>position: relative;</code> (shift from normal position)</li>
+      <li><code>position: absolute;</code> (relative to nearest positioned ancestor)</li>
+      <li><code>position: fixed;</code> (relative to viewport)</li>
+      <li><code>position: sticky;</code> (sticks on scroll)</li>
+    </ul>
+    <p><code>z-index</code> controls stacking order (higher z-index comes in front).</p>
+  </div>
+  <!-- Pseudo Classes -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-mouse2 me-2"></i>Pseudo Classes</h4>
+    <p>They allow you to style elements based on state:</p>
+    <ul>
+      <li><code>:hover</code> – when mouse hovers</li>
+      <li><code>:active</code> – when clicked</li>
+      <li><code>:focus</code> – when input is focused</li>
+      <li><code>:first-child</code> – first element among siblings</li>
+    </ul>
+    <pre class="code-box">a:hover { color: red; }</pre>
+  </div>
+
+  <!-- Media Queries -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-dark"><i class="bi bi-phone me-2"></i>Media Queries</h4>
+    <p>Make your site responsive across devices:</p>
+    <pre class="code-box">
+@media (max-width: 600px) {
+  body { background-color: lightblue; }
+}
+    </pre>
+  </div>
+
+  <!-- Box Model -->
+  <div class="mb-5 bg-light rounded shadow-lg p-5">
+    <h4 class="fw-bold text-info"><i class="bi bi-box me-2"></i>Box Model</h4>
+    <p>Every element is a rectangular box made of:</p>
+    <ul>
+      <li>Content</li>
+      <li>Padding</li>
+      <li>Border</li>
+      <li>Margin</li>
+    </ul>
+    <div class="preview-box">
+      <div style="margin: 10px; padding: 10px; border: 2px solid blue;">
+        Box Model Example
+      </div>
+    </div>
+  </div>
+
+  <!-- Flex & Grid -->
+  <div class="mb-5">
+    <h4 class="fw-bold text-secondary"><i class="bi bi-layout-split me-2"></i>Layouts: Flex & Grid</h4>
+    <div class="mb-3">
+      <strong>Flexbox</strong>
+      <pre class="code-box">.container { display: flex; justify-content: space-around; }</pre>
+      <div class="d-flex justify-content-around preview-box">
+        <div class="bg-light p-2">1</div>
+        <div class="bg-light p-2">2</div>
+        <div class="bg-light p-2">3</div>
+      </div>
+    </div>
+
+    <div>
+      <strong>Grid</strong>
+      <pre class="code-box">.grid { display: grid; grid-template-columns: repeat(3, 1fr); }</pre>
+      <div class="preview-box" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div class="bg-light p-2">A</div>
+        <div class="bg-light p-2">B</div>
+        <div class="bg-light p-2">C</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transitions vs Animations -->
+  <div class="bg-light rounded p-4 shadow mb-5">
+    <h4 class="fw-bold text-danger"><i class="bi bi-lightning-fill me-2"></i>Transitions vs Animations</h4>
+    <ul>
+      <li><strong>Transition:</strong> for simple effects (hover, color)</li>
+      <li><strong>Animation:</strong> for continuous movement</li>
+    </ul>
+    <pre class="code-box">
+/* Transition */
+.box:hover { background-color: red; transition: 0.5s; }
+
+/* Animation */
+@keyframes slide {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(0); }
+}
+    </pre>
+  </div>
+
+  <!-- Practice Quiz -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h5 class="fw-bold text-success"><i class="bi bi-patch-question me-2"></i>CSS Quick Quiz</h5>
+    <ol>
+      <li>What is the difference between ID and Class selectors?</li>
+      <li>How does the box model work?</li>
+      <li>What is the role of media queries?</li>
+      <li>What’s the difference between em and rem units?</li>
+      <li>What happens when you use <code>display: flex</code>?</li>
+    </ol>
+  </div>
+
+  <!-- Helpful Tips -->
+   <div class="alert alert-info shadow-sm">
+    <i class="bi bi-lightbulb-fill"></i> <strong>Pro Tip:</strong> Use your browser’s Developer Tools to test CSS live!
+  </div>
+
+  <!-- Navigation -->
+  <div class="text-center mt-5">
+    <a href="#!/html" class="btn btn-outline-dark me-2">
+      <i class="bi bi-arrow-left me-1"></i>Back to HTML
+    </a>
+    <a href="#!/bootstrap" class="btn btn-outline-success btn-lg">
+      <i class="bi bi-layers-fill me-2"></i>Next: Learn Bootstrap
+    </a>
+  </div>
+</div>

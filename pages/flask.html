@@ -1,0 +1,146 @@
+<style>
+
+  .code-box:hover {
+    background: grey;
+    border-left: 5px solid #ffc107;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #198754; /* Bootstrap success green */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-weight: bold;
+  }
+
+  .popup.show {
+    opacity: 1;
+  }
+</style>
+
+<div class="container my-5 bg-light shadow-lg rounded p-3" ng-controller="MainCtrl">
+  <h1 class="text-center text-danger fw-bold mb-4">
+    <i class="bi bi-terminal-fill me-2"></i>Flask (Python)
+  </h1>
+
+  <p class="lead text-center mb-4">
+    Flask is a simple yet powerful Python web framework. It’s perfect for beginners who want to build dynamic web apps and APIs quickly.
+  </p>
+<!--Why Falsk-->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+  <h4 class="fw-bold text-primary mb-3">
+    <i class="bi bi-lightning-fill me-2"></i>What Can Flask Do?
+  </h4>
+  <ul>
+    <li><strong>Handle HTTP requests and responses</strong> – Manage what happens when a user visits a URL.</li>
+    <li><strong>Manage routing</strong> – Connect web addresses (URLs) to Python functions that generate responses.</li>
+    <li><strong>Render HTML templates</strong> – Display dynamic content using Jinja2 templates.</li>
+    <li><strong>Connect with databases</strong> – Store, retrieve, and update data using databases like SQLite or MySQL.</li>
+    <li><strong>Build REST APIs</strong> – Let other apps or front-ends communicate with your backend easily.</li>
+  </ul>
+</div>
+
+  <!-- Basic Flask App -->
+  <div class="mb-5">
+  <h4 class="fw-bold text-success">
+    <i class="bi bi-code-slash me-2"></i>Basic Flask App Example
+  </h4>
+  <pre class="code-box">
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+  </pre>
+  <p>This simple app defines a single route (<code>/</code>) that shows <code>Hello, Flask!</code>. When you visit <code>localhost:5000</code>, Flask calls the <code>home</code> function and sends back the result.</p>
+</div>
+
+<!--Routes & Templates-->
+  <div class="mb-5">
+  <h4 class="fw-bold text-info">
+    <i class="bi bi-diagram-3-fill me-2"></i>Routes & Templates
+  </h4>
+  <p>A <strong>route</strong> tells Flask which function to run for a specific URL. Templates use placeholders to insert Python data into HTML.</p>
+  <pre class="code-box">
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+  </pre>
+  <p>The <code>render_template</code> function finds <code>index.html</code> inside the <code>templates</code> folder and sends it to the browser.</p>
+  <pre class="code-box">
+&lt;!-- templates/index.html --&gt;
+&lt;h1&gt;Welcome to Flask!&lt;/h1&gt;
+  </pre>
+</div>
+
+
+  <!-- Forms -->
+  <div class="mb-5">
+  <h4 class="fw-bold text-warning">
+    <i class="bi bi-ui-checks me-2"></i>Handling Forms
+  </h4>
+  <p>Flask handles form data using <code>request</code>. You can accept both GET and POST methods to process user input.</p>
+  <pre class="code-box">
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form["username"]
+        return f"Welcome, {username}!"
+    return "&lt;form method='post'&gt;&lt;input name='username'&gt;&lt;input type='submit'&gt;&lt;/form&gt;"
+  </pre>
+  <p>This app shows a simple login form and greets the user when they submit their name.</p>
+</div>
+
+
+  <!-- Practice Tip -->
+  <div class="alert alert-warning">
+    💡 <strong>Try this:</strong> Build a simple contact form that saves user data and shows a thank you page.
+  </div>
+
+  <!-- Quiz -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h5 class="fw-bold text-success">
+      <i class="bi bi-patch-question me-2"></i>Flask Quick Quiz
+    </h5>
+    <ol>
+      <li>How do you install Flask?</li>
+      <li>What does <code>@app.route()</code> do?</li>
+      <li>Where do you keep HTML templates in a Flask project?</li>
+      <li>How do you get data from an HTML form?</li>
+      <li>How do you run your Flask app in debug mode?</li>
+    </ol>
+  </div>
+  <div class="popup" ng-class="{'show': showPopup}">
+  🎉 <strong>{{ popupMessage }}</strong>
+</div>
+
+
+
+  <!-- Next & Back -->
+  <div class="text-center mt-5">
+    <a href="#!/angular" class="btn btn-outline-dark me-2">
+      <i class="bi bi-arrow-left me-1"></i>Back to AngularJS
+    </a>
+    <a href="#!/mini-projects" class="btn btn-outline-success btn-lg">
+      <i class="bi bi-git me-2"></i>Next: Mini-Projects Idea
+    </a>
+  </div>
+</div>
